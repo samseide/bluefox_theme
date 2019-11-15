@@ -1,0 +1,22 @@
+// Styling for the article content type.
+
+.node--type-article {
+  background-color: $campaign-background;
+
+  .node__meta{
+    display: none;
+  }
+
+  .node__content {
+    width: 75%;
+    font-size: 18px;
+    line-height: 1.5;
+    margin: auto;
+
+    .field--name-body {
+      padding-top: 1rem;
+    }
+  }
+
+
+}

@@ -1,0 +1,71 @@
+// Styling for the footer section of the website.
+
+.region-footer {
+  background-color: $campaign-primary;
+  color: rgba($color-white, .6);
+  width: 100%;
+  text-align: center;
+  height: 300px;
+  padding-top: 4rem;
+
+  .footer--social {
+    ul {
+      margin: auto;
+      display: inline-block;
+
+      li {
+        display: inline;
+        text-align: center;
+        padding: 0 1rem;
+
+        a {
+          color: rgba($color-white, .6);
+
+          &:hover {
+            color: $color-white;
+          }
+        }
+
+      }
+    }
+  }
+
+  .menu--footer {
+    padding-top: 2rem;
+
+    .menu {
+      margin: auto;
+      display: inline-block;
+
+      li {
+        display: inline;
+        text-align: center;
+      }
+
+      li:not(:last-child):after {
+        content: "|";
+        top: -2px;
+        padding: 0 .5rem;
+        color: rgba($color-white, .6);
+      }
+
+      a {
+        font-size: 18px;
+        color: rgba($color-white, .6);
+        text-transform: uppercase;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+          color: $color-white;
+        }
+      }
+    }
+  }
+
+  .footer--contact-info {
+    line-height: 1.5;
+    padding-top: 2rem;
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,53 @@
+// Type
+//
+// Site-wide fonts.
+//
+// Markup:
+// <div class="body-text">
+// <h2 style="font-family: 'Arial'">Font Stack Base: Arial</h2>
+// <h3 style="font-family: 'Arial'">Arial Bold</h3>
+// <h3 style="font-family: 'Arial'"><em>Arial Bold Italic</em></h3>
+// <h4 style="font-family: 'Arial'">Arial Bold</h4>
+// <h4 style="font-family: 'Arial'"><em>Arial Bold Italic</em></h4>
+// <p style="font-family: 'Arial'; line-height: 1.1; margin-bottom: 8px;"><strong>Arial Bold</strong></p>
+// <p style="font-family: 'Arial'; line-height: 1.1; margin-bottom: 8px;"><strong><em>Arial Bold Italic</em></strong></p>
+// <h3 style="font-family: 'Arial'; font-weight: normal;">Arial</h3>
+// <h3 style="font-family: 'Arial'; font-weight: normal;"><em>Arial Italic</em></h3>
+// <h4 style="font-family: 'Arial'; font-weight: normal;">Arial</h4>
+// <h4 style="font-family: 'Arial'; font-weight: normal;"><em>Arial Italic</em></h4>
+// <p style="font-family: 'Arial'; line-height: 1.1; margin-bottom: 8px;">Arial</p>
+// <p style="font-family: 'Arial'; line-height: 1.1; margin-bottom: 8px;"><em>Arial Italic</em></p>
+// <hr />
+// <h2 style="font-family: 'Georgia'">Font Stack Secondary: Georgia</h2>
+// <h3 style="font-family: 'Georgia'">Georgia Bold</h3>
+// <h3 style="font-family: 'Georgia'"><em>Georgia Bold Italic</em></h3>
+// <h4 style="font-family: 'Georgia'">Georgia Bold</h4>
+// <h4 style="font-family: 'Georgia'"><em>Georgia Bold Italic</em></h4>
+// <p style="font-family: 'Georgia'; line-height: 1.1; margin-bottom: 8px;"><strong>Georgia Bold</strong></p>
+// <p style="font-family: 'Georgia'; line-height: 1.1; margin-bottom: 8px;"><strong><em>Georgia Bold Italic</em></strong></p>
+// <h3 style="font-family: 'Georgia'; font-weight: normal;">Georgia</h3>
+// <h3 style="font-family: 'Georgia'; font-weight: normal;"><em>Georgia Italic</em></h3>
+// <h4 style="font-family: 'Georgia'; font-weight: normal;">Georgia</h4>
+// <h4 style="font-family: 'Georgia'; font-weight: normal;"><em>Georgia Italic</em></h4>
+// <p style="font-family: 'Georgia'; line-height: 1.1; margin-bottom: 8px;">Georgia</p>
+// <p style="font-family: 'Georgia'; line-height: 1.1; margin-bottom: 8px;"><em>Georgia Italic</em></p>
+// </div>
+//
+// Weight: 999
+//
+// Style guide: General.type
+
+$font-sans: 'Playfair Display', sans-serif;
+$font-serif: 'Source Sans Pro', sans-serif;
+
+@mixin font-stack-base {
+  font-family: $font-sans;
+}
+
+@mixin font-stack-secondary {
+  font-family: $font-serif;
+}
+
+$font-weight-bold: bold;
+$font-weight-normal: normal;
+$font-italic: italic;

@@ -1,0 +1,27 @@
+// Colors
+//
+// All Sass color variables prefixed with $color-.
+// This makes it easy to figure out what a variable
+// is for later.
+
+// Primary
+$color-white: #FFF;
+$color-black: #000;
+$color-green-lt: #dfeed8;
+$color-green-mid: #77b259;
+$color-green-dk: #325e1c;
+$color-accessible-green: #4C9486;
+$color-red-lt: #fadad4;
+$color-red-mid: #e62600;
+$color-red-dk: #a51b00;
+$color-yellow-lt: #f9ecd1;
+$color-yellow-mid: #e09600;
+$color-yellow-dk: #734c00;
+$color-gray-mid: #6d6e71;
+$color-gray-lt: #d3d3d4;
+$color-gray-xlt: #f5f4f0;
+
+// Campaign Color Scheme
+$campaign-primary: #232066;
+$campaign-secondary: $color-red-dk;
+$campaign-background: #F5F3F2;

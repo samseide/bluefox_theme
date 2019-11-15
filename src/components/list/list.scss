@@ -1,0 +1,89 @@
+// List.
+
+.paragraph--type--list {
+
+  padding-bottom: 1rem;
+
+  .list--header {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+
+    .field--name-field-list-title {
+      border-bottom: 1px solid $color-yellow-mid;
+      width: 60%;
+      margin: auto;
+      padding-bottom: 1rem;
+    }
+  }
+
+  h2 {
+    font-size: 32px;
+  }
+
+  &.body-color-white {
+    background-color: $campaign-background;
+    color: $campaign-primary;
+
+    .body-copy--inner {
+      border-top: 3px solid $campaign-secondary;
+      border-bottom: 3px solid $campaign-secondary;
+    }
+  }
+
+  &.body-color-primary {
+    background-color: $campaign-primary;
+    color: $color-white;
+
+    .body-copy--inner {
+      border-top: 3px solid $campaign-secondary;
+      border-bottom: 3px solid $campaign-secondary;
+    }
+  }
+
+  &.body-color-secondary {
+    background-color: $campaign-secondary;
+    color: $color-white;
+
+    .body-copy--inner {
+      border-top: 3px solid $campaign-primary;
+      border-bottom: 3px solid $campaign-primary;
+    }
+  }
+
+  .list-items {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .list-item {
+      width: 600px;
+      background-color: $campaign-background;
+      color: $color-black;
+      text-align: justify;
+      margin: 10px;
+      border-radius: 5px;
+
+      .list-item--insides {
+        margin: 25px;
+
+        h3 {
+          padding: 1rem 0;
+          background-color: $campaign-secondary;
+          color: $campaign-background;
+          text-align: center;
+        }
+
+        .list-items--body {
+          padding: 0 1rem;
+          line-height: 1.25;
+        }
+
+      }
+    }
+  }
+
+}

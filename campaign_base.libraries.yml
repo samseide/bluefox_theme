@@ -1,0 +1,7 @@
+global:
+  css:
+    theme:
+      '//fonts.googleapis.com/css?family=Playfair+Display': { type: external, minified: true }
+      '//fonts.googleapis.com/css?family=Source+Sans+Pro': { type: external, minified: true }
+      '//use.fontawesome.com/releases/v5.2.0/css/all.css': { type: external, minified: true }
+      compiled/css/styles.css: {}

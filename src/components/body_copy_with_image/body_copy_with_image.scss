@@ -1,0 +1,90 @@
+.paragraph--type--body-copy-with-image {
+  display: inline-block;
+  position: relative;
+
+  .body-copy--image {
+    width: 40%;
+
+    img {
+      width: 75%;
+      max-width: inherit;
+      height: auto;
+      border-radius: 100%;
+      margin: 2rem auto;
+      display: block;
+      border: $campaign-primary solid 3px;
+    }
+  }
+
+  .body-copy {
+    display: flex;
+  }
+
+  .body-copy--left {
+
+    h2 {
+      color: $campaign-primary;
+    }
+
+    .body-copy--image {
+      float: left;
+      padding-right: 2rem;
+    }
+
+    .body-copy--text {
+      background-color: $campaign-background;
+    }
+  }
+
+  .body-copy--right {
+    .body-copy--image {
+      float: right;
+      padding-left: 2rem;
+    }
+  }
+
+  .field--name-field-body-copy-image {
+    display: inherit;
+    margin-bottom: -3px;
+  }
+
+  .body-copy--text {
+    padding: 2rem 2rem 0;
+    display: block;
+
+    h2 {
+      color: $campaign-secondary;
+      font-size: 32px;
+    }
+  }
+
+  @media only screen and (max-width: $bp-xmd) {
+
+    .body-copy--right, .body-copy--left {
+      .body-copy--image {
+        float: none;
+        width: 100%;
+        margin: auto;
+        display: block;
+        padding-left: 0;
+        padding-right: 0;
+        height: 300px;
+        overflow: hidden;
+        position: relative;
+
+        img {
+          position: absolute;
+          top:-100%; left:0; right: 0; bottom:-100%;
+          margin: auto;
+        }
+      }
+    }
+
+    .body-copy--text {
+      width: 100%;
+      display: block;
+      padding: 2rem;
+    }
+  }
+
+}

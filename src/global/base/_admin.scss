@@ -1,0 +1,144 @@
+// Baseline styling for elements that typically appear
+// in the main content area on administrative pages,
+// and for visually identifying administrative
+// workflow states.
+// This is to help support an unbroken-looking UI when
+// the admin theme is not in use for administrative pages.
+
+.l-base__page {
+
+  .entity-status-unpublished & {
+    padding-top: 50px;
+    position: relative;
+
+    &::before {
+      background: rgba($color-red-lt, 0.75);
+      box-sizing: border-box;
+      color: $color-red-dk;
+      content: 'Unpublished';
+      display: block;
+      font-size: 24px;
+      left: 0;
+      line-height: 1;
+      padding: 13px;
+      position: absolute;
+      text-align: center;
+      text-transform: uppercase;
+      top: 0;
+      width: 100%;
+    }
+  }
+
+  .node--unpublished {
+    // Unset default pink background on node wrapper.
+    background-color: transparent;
+  }
+}
+
+.l-base__main {
+
+  p {
+    font-size: 1rem;
+    line-height: 1.2;
+  }
+
+  p,
+  ol,
+  ul {
+    margin-bottom: 16px;
+  }
+
+  li {
+    line-height: 1.5;
+    margin-bottom: 8px;
+    padding-left: 8px;
+  }
+
+  select {
+    width: 100%;
+  }
+
+  table {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  td,
+  th {
+    border: 1px solid $color-gray-mid;
+    color: $color-black;
+    font-size: 0.875rem;
+    padding: 0.5rem 0.75rem;
+    text-align: left;
+    vertical-align: middle;
+
+    .tabledrag-handle .handle {
+      height: 24px;
+      width: 24px;
+    }
+  }
+
+  th {
+    background-color: $color-gray-xlt;
+    font-size: 1rem;
+  }
+
+  .page-title {
+    @include font-stack-secondary;
+    font-size: 2rem;
+    font-weight: $font-weight-normal;
+    line-height: 1.1;
+    margin: 0 0 22px;
+  }
+}
+
+// View mode/back link used in preview view of nodes.
+.node-preview-container {
+  padding: 5px;
+
+  form {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .node-preview-backlink {
+    background-color: $color-gray-mid;
+    border-radius: 50px;
+    color: $color-white;
+    display: block;
+    font-size: 0.75rem;
+    font-weight: $font-weight-bold;
+    line-height: 1;
+    padding: 15px 15px 15px 25px;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    &:focus,
+    &:hover {
+      background-color: $color-black;
+    }
+
+    &::before {
+      border-top: 5px solid transparent;
+      border-bottom: 5px solid transparent;
+      border-right: 5px solid $color-white;
+      content: '';
+      display: block;
+      left: 15px;
+      position: absolute;
+      top: 15px;
+    }
+  }
+
+  .form-item {
+    margin: 0;
+    padding: 5px;
+  }
+}
+
+// Wrapper for blocks used in help region that
+// provide help text.
+.admin__help-content-wrapper {
+  padding: 1rem 0;
+}

@@ -1,0 +1,200 @@
+//=======================================================
+// Mixins
+//=======================================================
+
+// Clearfix
+@mixin clearfix {
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+// Makes an element visually hidden, but accessible.
+// @see http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+@mixin element-invisible {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+// Turns off the element-invisible effect.
+@mixin element-invisible-off {
+  position: static !important;
+  clip: auto;
+  height: auto;
+  width: auto;
+  overflow: auto;
+}
+
+// Makes an element visually hidden by default, but visible when focused.
+@mixin element-focusable {
+  @include element-invisible;
+
+  &:active,
+  &:focus {
+    @include element-invisible-off;
+  }
+}
+
+// Helper function for working with Sass maps.
+// Example: @include print($configuration);
+@mixin print($declarations) {
+  @each $property, $value in $declarations {
+    #{$property}: $value;
+  }
+}
+
+// Veritcally align an element
+@mixin vertical-align($position: absolute)  {
+  position: $position;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+// Horizontaly align an element
+@mixin horizontal-align($position: absolute) {
+  position: $position;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+// Vertically/Horizontaly center an element
+@mixin vertical-horizontal-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transform-origin: 50% 50%;
+}
+
+// Default component wrapper padding.
+@mixin wrapper-spacing {
+  padding: 0 20px;
+
+  // Updating left/right padding at >= sm breakpoint
+  // to accommodate sticky menu.
+  @include breakpoint($bp-sm) {
+    padding: 0 30px;
+  }
+
+  // Remove padding for base layout that isn't full width.
+  .l-base__main-container & {
+    padding: 0;
+  }
+}
+
+// Default component container padding.
+@mixin container-spacing {
+  padding: 30px 0;
+}
+
+// Standard button treatment for call-to-action buttons.
+@mixin cta-button {
+  background-color: $color-white;
+  border: 1px solid $color-gray-dk;
+  border-radius: 3px;
+  color: $color-gray-dk;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: $font-weight-bold;
+  margin: 12px 12px 12px 0;
+  padding: 16px 30px;
+  text-align: center;
+  text-decoration: none;
+
+  &:focus,
+  &:hover {
+    background-color: $color-gray-lt;
+  }
+}
+
+@mixin card-width {
+  width: 272px;
+}
+
+// Standard treatment for text-based elements available
+// in WYSIWYG-enabled fields.
+@mixin body-text {
+
+  p {
+    @include font-stack-base;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 16px;
+  }
+
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @include font-stack-secondary;
+    line-height: 1.1;
+    margin-bottom: 8px;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.625rem;
+  }
+
+  h4 {
+    font-size: 1.375rem;
+  }
+
+  h5 {
+    font-size: 1.25rem;
+  }
+
+  h6 {
+    font-size: 1.125rem;
+  }
+
+  a {
+    border-bottom: 1px solid $color-gray-dk;
+    color: $color-black;
+    text-decoration: none;
+    transition: border-color 250ms;
+  }
+
+  a:focus,
+  a:hover {
+    border-color: $color-pwc-burgundy;
+    border-width: 2px;
+    color: $color-pwc-burgundy;
+    text-decoration: none;
+  }
+
+  hr {
+    background: $color-pwc-gray-dk;
+    border: 0;
+    height: 1px;
+    margin: 16px 0;
+  }
+}
+
+@mixin border ($style,  $sides...){
+  @if ($style != "") {
+    @if ($sides == "") {
+      border: $style;
+    }
+    @else {
+      @each $side in $sides {
+        @if ($side == 'top' or
+          $side == 'right' or
+          $side == 'bottom' or
+          $side == 'left') {
+          border-#{$side}: $style;
+        }
+      }
+    }
+  }
+}

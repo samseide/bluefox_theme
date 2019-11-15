@@ -1,0 +1,48 @@
+.paragraph--type--body-copy {
+  padding: 2rem 0;
+
+  .body-copy--inner {
+    width: 80vw;
+    margin: 0 auto;
+    padding: 2rem 0;
+    font-size: 20px;
+
+    .field--name-field-body-copy {
+      width: 90%;
+      margin: auto;
+      text-align: center;
+      line-height: 1.5;
+    }
+  }
+
+  &.body-color-white {
+    background-color: $campaign-background;
+    color: $campaign-primary;
+
+    .body-copy--inner {
+      border-top: 3px solid $campaign-secondary;
+      border-bottom: 3px solid $campaign-secondary;
+    }
+  }
+
+  &.body-color-primary {
+    background-color: $campaign-primary;
+    color: $color-white;
+
+    .body-copy--inner {
+      border-top: 3px solid $campaign-secondary;
+      border-bottom: 3px solid $campaign-secondary;
+    }
+  }
+
+  &.body-color-secondary {
+    background-color: $campaign-secondary;
+    color: $color-white;
+
+    .body-copy--inner {
+      border-top: 3px solid $campaign-primary;
+      border-bottom: 3px solid $campaign-primary;
+    }
+  }
+
+}
